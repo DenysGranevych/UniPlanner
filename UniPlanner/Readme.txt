@@ -1,0 +1,1 @@
+Для створення бд в "Package Manager Console" введіть update-database
