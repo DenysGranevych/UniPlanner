@@ -48,17 +48,28 @@
   <ItemGroup>
     <Compile Include="DBContext\BaseContext.cs" />
     <Compile Include="Entities\Base\BaseEntity.cs" />
+    <Compile Include="Entities\Building.cs" />
     <Compile Include="Entities\Course.cs" />
     <Compile Include="Entities\Day.cs" />
+    <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\StudentGroup.cs" />
     <Compile Include="Entities\Lesson.cs" />
     <Compile Include="Entities\LessonType.cs" />
+    <Compile Include="Entities\Room.cs" />
     <Compile Include="Entities\Sequence.cs" />
+    <Compile Include="Entities\Univer.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\WeekType.cs" />
+    <Compile Include="Enums\RoleEnum.cs" />
     <Compile Include="Enums\SemesterEnum.cs" />
     <Compile Include="Enums\WeekEnum.cs" />
     <Compile Include="Migrations\201511142311486_Init.cs" />
     <Compile Include="Migrations\201511142311486_Init.Designer.cs">
       <DependentUpon>201511142311486_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511152029474_init2.cs" />
+    <Compile Include="Migrations\201511152029474_init2.Designer.cs">
+      <DependentUpon>201511152029474_init2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,6 +81,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201511142311486_Init.resx">
       <DependentUpon>201511142311486_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511152029474_init2.resx">
+      <DependentUpon>201511152029474_init2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

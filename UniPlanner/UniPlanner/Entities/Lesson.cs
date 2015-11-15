@@ -8,7 +8,7 @@ namespace UniPlanner.Entities
     public class Lesson : BaseEntity
     {
 
-        #region ForeignKeys
+        #region Foreign Keys
 
         public Guid SequenceId { get; set; }
 
@@ -19,6 +19,13 @@ namespace UniPlanner.Entities
         public Guid WeekTypeId { get; set; }
 
         public Guid CourseId { get; set; }
+
+        public Guid RoomId { get; set; }
+
+        public Guid StudentGroupId { get; set; }
+         #endregion
+
+        #region Navigation Properties
 
         [ForeignKey("SequenceId")]
         public virtual Sequence Sequence { get; set; }
@@ -34,10 +41,19 @@ namespace UniPlanner.Entities
 
         [ForeignKey("CourseId")]
         public virtual Course Course { get; set; }
+
+        [ForeignKey("RoomId")]
+        public virtual Room Room { get; set; }
+
+        [ForeignKey("StudentGroupId")]
+        public virtual StudentGroup StudentGroup { get; set; }
+
         #endregion
 
         public bool IsActive { get; set; }
 
         public SemesterEnum Semester { get; set; }
+
+        public DateTime ActualYear { get; set; }
     }
 }
